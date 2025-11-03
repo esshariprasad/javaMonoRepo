@@ -38,7 +38,7 @@ class OrderController {
     @GetMapping("/orders/test-user")
     public String getUserHealth() {
         // Call user-service endpoint
-        String response = restTemplate.getForObject("http://localhost:8081/users/health", String.class);
+        String response = restTemplate.getForObject("http://user-service:8081/users/health", String.class);
         return "Order-service calling user-service → " + response;
     }
 
